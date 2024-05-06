@@ -1,0 +1,8 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Add a background color for the space around the rectangle */
+}
+

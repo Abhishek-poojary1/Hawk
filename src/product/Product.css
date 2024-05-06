@@ -1,0 +1,214 @@
+.products {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.product-top {
+  display: flex;
+  width: auto;
+  /* Spread across the device width */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label-area {
+  flex: 1;
+  /* Occupy remaining space */
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+}
+
+.search-area input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 200px;
+  /* Adjust width as needed */
+}
+
+.product-top button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.product-top button:hover {
+  background-color: #0056b3;
+}
+
+.product-status {
+  display: flex;
+  /* padding: 16px; */
+  margin: 50px;
+  justify-content: space-between;
+  /* Spread cards equally */
+}
+
+.product-card {
+  width: calc(33.33% - 10px);
+  /* 33.33% width for each card with some spacing */
+  background-color: white;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  /* Space items evenly along the main axis */
+  align-items: center;
+  /* Center items along the cross axis */
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prd-crd-lbl {
+  font-weight: bold;
+}
+
+.prd-crd-dt {
+  font-weight: 600;
+}
+
+.actv-logo {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  background-color: #3acc6f;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.dactv-logo {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  background-color: #f55b74;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.prd-logo {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  background-color: #3373ee;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+
+/* .actv-logo2 {
+    
+    color:rgb(17, 156, 4);
+    font-size: 30px;
+  } */
+
+.dactv-logo2 {
+  /* Additional styles for the logo container */
+  color: rgb(247, 30, 22);
+  font-size: 30px;
+}
+
+.prd-logo2 {
+  color: #007bff;
+  font-size: 30px;
+}
+
+
+
+.prd-list-fltr {
+
+  margin: 50px;
+  justify-content: space-between;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+/* Add margin between icons */
+.prd-list-fltr i {
+  margin-left: 10px;
+}
+
+.prd-list-fltr .selected {
+  background-color: #ccc;
+  /* Grey background color */
+  padding: 5px;
+  /* Optional: Add padding to improve visual appearance */
+  border-radius: 5px;
+  /* Optional: Add border radius for rounded corners */
+}
+
+.ght {
+  border: 1px solid #ddd1d1;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* Adjust the minimum width (300px) as needed */
+  gap: 20px;
+  /* Adjust the gap between cards as needed */
+  margin: 50px;
+}
+
+.products-details {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+
+  /* Adjust the breakpoint as needed */
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Adjust the breakpoint as needed */
+  .product-grid {
+    grid-template-columns: 1fr;
+    /* Single card per row on smaller screens */
+  }
+}
+
+
+.product-details-table {
+  margin: 50px;
+}
+
+
+.basic-tab {
+  margin: 50px;
+}

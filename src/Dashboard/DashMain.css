@@ -1,0 +1,342 @@
+.main-content {
+
+  flex-grow: 1;
+  height: 900px;
+  /* background-color: #cdb8a5; */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.cards {
+  padding-left: 10px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 230px;
+  height: auto;
+  /* border: 1px solid #ccc; */
+  border: none;
+  /* background-color: #c9a788; */
+  /* background: linear-gradient(to right, #c9a788, #c6bfb9, #6a645e); */
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  /* padding: 10px;*/
+  margin-right: 30px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  align-content: center;
+}
+
+/* .xyz{
+    padding-left: 10px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between; 
+  } */
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.actv-logo {
+  /* Additional styles for the logo container */
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  background-color: #3acc6f;
+  border-radius: 5px;
+  width: 40px;
+  height: 37px;
+  padding-left: 3px;
+
+}
+
+.purpose {
+  margin-right: 10px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.data>div {
+  margin-bottom: 5px;
+}
+
+.list-section {
+  margin-top: 30px;
+}
+
+.listdata-card {
+  background-color: #d5d5d5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 50px;
+}
+
+.search {
+  padding: 10px;
+  text-align: right;
+}
+
+.search input {
+  width: 25%;
+  padding: 8px;
+  border: 1px solid #f6f4f4;
+  border-radius: 7px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.create-user-button {
+  background-color: #3bef1b;
+  margin-left: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.theader th {
+  /* background-color: black; */
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  /* Light gray background color */
+}
+
+.active-user {
+  width: 50px;
+  height: 50px;
+}
+
+.inactive-user {
+  width: 50px;
+  height: 50px;
+}
+
+.total-user {
+  width: 40px;
+  height: 40px;
+}
+
+.pend-user {
+  width: 60px;
+  height: 60px;
+}
+
+.filtr {
+  /* background-image: linear-gradient(to right, #5a514a, rgb(219, 160, 111)); */
+  /* Adjust colors as needed */
+  color: #36406d;
+  background-color: white;
+}
+
+.gCard1 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4285f4;
+}
+
+.gCard2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #da412d;
+}
+
+.gCard3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #22c55e;
+}
+
+.tableContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background-color:#E3D8D0; */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tableCard {
+  width: calc(50% - 20px);
+  background-color: #e0d4c8;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .tableCard {
+    width: 100%;
+  }
+}
+
+/* .msg-card {
+    width: 230px; 
+    height: auto;
+    border: 1px solid #ccc;
+    background-color: #5a514a;
+    color: white;
+    border-radius: 10px;
+    margin-right: 30px;  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    align-content: center;
+  } */
+
+.xyz {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line */
+  justify-content: flex-start;
+  /* Align items at the start of the container */
+  gap: 10px;
+  /* Add gap between cards */
+}
+
+.msg-card {
+  /* flex: 0 1 40%; Remove this line */
+  width: calc((100% - 20px) / 3);
+  /* Calculate width for 3 cards with a 10px gap */
+  /* max-width: 400px;  Limit the maximum width */
+  /* border: 1px solid #ccc; */
+  border: none;
+  background-color: white;
+  color: #36406d;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .msg-card {
+    flex-basis: calc((100% - 20px) / 2);
+    /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .msg-card {
+    flex-basis: 100%;
+    /* Full width for small screens */
+  }
+}
+
+
+
+.product-status2 {
+  display: flex;
+  /* padding: 16px; */
+  margin: 50px;
+  justify-content: space-between;
+  /* Spread cards equally */
+}
+
+.product-card2 {
+  width: calc(25% - 10px);
+  background-color: white;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prd-crd-lbl2 {
+  font-weight: bold;
+}
+
+.prd-crd-dt2 {
+  font-weight: 600;
+}
+
+.actv-logo2 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  background-color: #3acc6f;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.dactv-logo2-2 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  background-color: #f55b74;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.micro-logo2 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  background-color: #9e46ee;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.tot-logo2 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  background-color: #3373ee;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

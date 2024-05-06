@@ -1,0 +1,37 @@
+.thingsActv-logo {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    background-color: #3acc6f;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.thingsDactv-logo {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    background-color: #f55b74;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.thingsMicro-logo {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    background-color: #9e46ee;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
