@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Things.css'
+import "./Things.css";
 
 import Paper from "@mui/material/Paper";
 import { CloudDownload } from "lucide-react";
@@ -131,7 +131,7 @@ const Things = () => {
   const total = com + fail;
   const per = ((com / total) * 100).toFixed(2);
   const perce = ((fail / total) * 100).toFixed(2);
-  const { setselectedthing } = useAuth();
+  const { setselectedthing, isDarkMode } = useAuth();
   const [selectedData, setSelectedData] = useState({
     type: "Online",
     data: onlineRows,
@@ -152,10 +152,11 @@ const Things = () => {
     <div className="no-scrollbar mt-3">
       <div className="flex justify-between items-center px-8 gap-8 duration-75 select-none mx-auto my-6">
         <div
-          className={`flex justify-between items-center flex-grow h-24 bg-white w-72 rounded-lg ${selectedDiv === "Online"
-            ? "shadow-2xl shadow-blue-500"
-            : "shadow-lg"
-            } px-7 py-7 text-black overflow-hidden `}
+          className={`flex justify-between items-center flex-grow h-24  w-72 rounded-lg ${
+            selectedDiv === "Online" ? "shadow-lg shadow-blue-500" : "shadow-lg"
+          } px-7 py-7 text-black overflow-hidden 
+              ${isDarkMode ? "bg-[#313135] text-white" : ""}
+            `}
           onClick={() =>
             handleDeviceClick({ type: "Online", data: onlineRows }, "Online")
           }
@@ -165,19 +166,31 @@ const Things = () => {
             <p>{com}</p>
             <p>{per}</p>
           </div>
-          <div className='thingsActv-logo'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-
+          <div className="thingsActv-logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-
             </svg>
           </div>
         </div>
         <div
-          className={`flex justify-between items-center flex-grow h-24 bg-white w-72 rounded-lg ${selectedDiv === "Offline"
-            ? "shadow-2xl shadow-blue-500"
-            : "shadow-lg"
-            } px-7 py-7 overflow-hidden`}
+          className={`flex justify-between items-center flex-grow h-24 w-72 rounded-lg ${
+            selectedDiv === "Offline"
+              ? "shadow-lg shadow-blue-500"
+              : "shadow-lg"
+          } px-7 py-7 overflow-hidden ${
+            isDarkMode ? "bg-[#313135] text-white" : ""
+          }
+          `}
           onClick={() =>
             handleDeviceClick({ type: "Offline", data: offlineRows }, "Offline")
           }
@@ -188,17 +201,29 @@ const Things = () => {
             <p>{perce}</p>
           </div>
           <div className="thingsDactv-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <path d="M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5a8 8 0 0 0 4 15h9a5 5 0 0 0 1.7-.3"></path>
               <line x1="1" y1="1" x2="23" y2="23"></line>
             </svg>
           </div>
         </div>
         <div
-          className={`flex justify-between items-center flex-grow h-24 bg-white w-72 rounded-lg ${selectedDiv === "Total" ? "shadow-2xl shadow-blue-500" : "shadow-lg"
-            } px-7 py-7 overflow-hidden`}
+          className={`flex justify-between items-center flex-grow h-24 w-72 rounded-lg ${
+            selectedDiv === "Total" ? "shadow-lg shadow-blue-500" : "shadow-lg"
+          } px-7 py-7 overflow-hidden               ${
+            isDarkMode ? "bg-[#313135] text-white" : ""
+          }
+          `}
           onClick={() =>
             handleDeviceClick({ type: "Total", data: totalRows }, "Total")
           }
@@ -213,16 +238,28 @@ const Things = () => {
         </div>
       </div>
       <div className="flex align-middle justify-center top-10 relative -mb-11 w-full ">
-        <Paper variant="elevation" className="w-max max-w-[1200px]">
-          <div className="flex align-middle">
+        <Paper
+          variant="elevation"
+          className={`w-max max-w-[1200px] rounded-xl	 ${
+            isDarkMode ? "bg-[#313135] text-white" : ""
+          }
+`}
+        >
+          <div
+            className={`flex align-middle     ${
+              isDarkMode ? "bg-[#313135] text-white" : ""
+            }`}
+          >
             <div className="mx-3.5 mr-96 font-bold self-center align-middle flex">
               <CloudDownload />
-              <p className="mx-5">OTA Release</p>
+              <p className="mx-5">Things</p>
             </div>
             <div className="flex align-middle justify-between g-y-2">
               <input
                 type="text"
-                className="border-l-rose-300 ml-3.5 outline-none text-center"
+                className={`border-l-rose-300 ml-3.5 outline-none text-center ${
+                  isDarkMode ? "bg-[#313135] text-white" : ""
+                }`}
                 placeholder="search"
               />
               <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
@@ -236,6 +273,9 @@ const Things = () => {
                 rows={selectedData.data}
                 columns={columns}
                 onCellClick={handlecellclick}
+                className={`border-none	 ${
+                  isDarkMode ? "bg-[#313135] text-white" : ""
+                }`}
                 initialState={{
                   pagination: {
                     paginationModel: { page: 0, pageSize: 5 },
@@ -248,7 +288,7 @@ const Things = () => {
                     color: "#ffffff",
                   },
                   "& .MuiDataGrid-columnHeader": {
-                    backgroundColor: "#000000",
+                    backgroundColor: "#313135",
                     width: "100%",
                     color: "#ffffff",
                   },

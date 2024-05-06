@@ -23,7 +23,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
 const UserDetails = () => {
-  const { userdata, updateUserdata, deleteUserdata } = useAuth();
+  const { userdata, updateUserdata, deleteUserdata, isDarkMode } = useAuth();
   const [anchorEl, setAnchorEl] = useState(null);
   const [editableUserGroup, setEditableUserGroup] = useState(
     userdata?.UserGroup || ""
@@ -73,8 +73,15 @@ const UserDetails = () => {
 
   return (
     <div className="flex flex-col items-center no-scrollbar">
-      <div className="h-1/42 w-4/5 shadow-2xl	 my-4 flex flex-col  select-none rounded p-10">
-        <div className=" flex items-center gap-4 font-medium mb-1.5	 text-xl ">
+      <div
+        className={`h-1/42 w-4/5 shadow-2xl	 my-4 flex flex-col  select-none rounded p-10   ${
+          isDarkMode ? "bg-[#313135] text-white" : ""
+        }`}
+      >
+        <div
+          className={`flex items-center gap-4 font-medium mb-1.5	 text-xl          
+`}
+        >
           <div className="flex gap-5 mr-auto">
             <CircleUser />
             User details {userdata.JOBID}

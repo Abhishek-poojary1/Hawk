@@ -1,5 +1,4 @@
 .main-content {
-
   flex-grow: 1;
   height: 900px;
   /* background-color: #cdb8a5; */
@@ -7,7 +6,6 @@
   align-items: center;
   margin: 0;
   padding: 0;
-
 }
 
 .cards {
@@ -25,7 +23,7 @@
   /* background-color: #c9a788; */
   /* background: linear-gradient(to right, #c9a788, #c6bfb9, #6a645e); */
   color: black;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 10px;
   /* padding: 10px;*/
   margin-right: 30px;
@@ -55,7 +53,6 @@
   width: 40px;
   height: 37px;
   padding-left: 3px;
-
 }
 
 .purpose {
@@ -68,7 +65,7 @@
   align-items: flex-start;
 }
 
-.data>div {
+.data > div {
   margin-bottom: 5px;
 }
 
@@ -155,13 +152,6 @@ tbody tr:nth-child(even) {
   height: 60px;
 }
 
-.filtr {
-  /* background-image: linear-gradient(to right, #5a514a, rgb(219, 160, 111)); */
-  /* Adjust colors as needed */
-  color: #36406d;
-  background-color: white;
-}
-
 .gCard1 {
   width: 10px;
   height: 10px;
@@ -187,22 +177,18 @@ tbody tr:nth-child(even) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* background-color:#E3D8D0; */
   padding: 20px;
   box-sizing: border-box;
 }
 
 .tableCard {
   width: calc(50% - 20px);
-  background-color: #e0d4c8;
-  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
 
   margin-bottom: 20px;
 }
-
 
 @media only screen and (max-width: 600px) {
   .tableCard {
@@ -242,8 +228,6 @@ tbody tr:nth-child(even) {
   /* max-width: 400px;  Limit the maximum width */
   /* border: 1px solid #ccc; */
   border: none;
-  background-color: white;
-  color: #36406d;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -262,8 +246,6 @@ tbody tr:nth-child(even) {
   }
 }
 
-
-
 .product-status2 {
   display: flex;
   /* padding: 16px; */
@@ -274,13 +256,11 @@ tbody tr:nth-child(even) {
 
 .product-card2 {
   width: calc(25% - 10px);
-  background-color: white;
   display: flex;
   padding: 15px;
   justify-content: space-between;
   align-items: center;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .prd-crd-lbl2 {
@@ -339,4 +319,7 @@ tbody tr:nth-child(even) {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+.transition-box-shadow {
+  transition: box-shadow 0.3s ease-in-out;
 }

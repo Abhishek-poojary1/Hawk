@@ -3,8 +3,6 @@
   padding: 0;
 }
 
-
-
 .product-top {
   display: flex;
   width: auto;
@@ -63,7 +61,6 @@
 .product-card {
   width: calc(33.33% - 10px);
   /* 33.33% width for each card with some spacing */
-  background-color: white;
   display: flex;
   padding: 15px;
   justify-content: space-between;
@@ -120,7 +117,6 @@
   align-items: center;
 }
 
-
 /* .actv-logo2 {
     
     color:rgb(17, 156, 4);
@@ -138,15 +134,11 @@
   font-size: 30px;
 }
 
-
-
 .prd-list-fltr {
-
   margin: 50px;
   justify-content: space-between;
   display: flex;
   justify-content: flex-end;
-
 }
 
 /* Add margin between icons */
@@ -186,7 +178,6 @@
 }
 
 @media (max-width: 1200px) {
-
   /* Adjust the breakpoint as needed */
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
@@ -195,7 +186,6 @@
 }
 
 @media (max-width: 480px) {
-
   /* Adjust the breakpoint as needed */
   .product-grid {
     grid-template-columns: 1fr;
@@ -203,11 +193,9 @@
   }
 }
 
-
 .product-details-table {
   margin: 50px;
 }
-
 
 .basic-tab {
   margin: 50px;

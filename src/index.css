@@ -50,7 +50,7 @@
   top: -321px;
   width: 180px; /* Adjust as needed */
   height: 210px;
-  background-color: blue; /* Change to desired color */
+  background-color: #313135; /* Change to desired color */
   border-radius: 100% 0% 0% 100% / 8% 100% 0% 92%;
   position: relative;
 }

@@ -7,7 +7,7 @@ import { Key, Airplay, History, Cpu, Handshake, Calendar } from "lucide-react";
 import { CloudDownload } from "lucide-react";
 const DetailsPage = () => {
   const location = useLocation();
-  const { selectedCellData } = useAuth();
+  const { selectedCellData, isDarkMode } = useAuth();
 
   // Check if the location state is available
   if (selectedCellData === null) {
@@ -18,7 +18,11 @@ const DetailsPage = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="h-1/42 w-4/5 shadow-2xl	 my-4 flex flex-col  select-none rounded p-10">
+      <div
+        className={`h-1/42 w-4/5 shadow-2xl	 my-4 flex flex-col  select-none rounded p-10   ${
+          isDarkMode ? "bg-[#313135] text-white" : ""
+        }`}
+      >
         <div className="flex gap-4 font-medium mb-1.5	 text-xl ">
           {" "}
           <CloudDownload />
@@ -64,7 +68,11 @@ const DetailsPage = () => {
           </div>
         </div>
       </div>
-      <div className="h-1/42 w-4/5 shadow-2xl	 my-4 mt-7 flex flex-col  select-none rounded p-10 ">
+      <div
+        className={`h-1/42 w-4/5 shadow-2xl	 my-4 mt-7 flex flex-col  select-none rounded p-10   ${
+          isDarkMode ? "bg-[#313135] text-white" : ""
+        }`}
+      >
         <span className="font-bold">OTA JOBS</span>
       </div>
     </div>

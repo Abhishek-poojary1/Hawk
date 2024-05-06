@@ -1,56 +1,68 @@
-import React from 'react';
-import BasicTabs from './BasicTabs';
+import React from "react";
+import BasicTabs from "./BasicTabs";
+import { useAuth } from "../pages/AuthContext";
 
 const ProductDetailPage = ({ productId }) => {
   // Fetch product details using productId
 
+  const { isDarkMode } = useAuth();
+
   return (
-        <div>
-            <section>
-            <div className='product-status'>
-                <div className="product-card">
-                  <div>
-                    <div className='prd-crd-lbl'>Registered Devices</div>
-                    <div className='prd-crd-dt'>4</div>
-                    <div>40 %</div>
-                  </div>
-                  <div className='actv-logo'>
-                  <i class="fa-brands fa-connectdevelop"></i>
-                  </div>
-                </div>
+    <div>
+      <section>
+        <div className="product-status">
+          <div
+            className={`product-card ${
+              isDarkMode ? "bg-[#313135] text-white" : ""
+            }`}
+          >
+            <div>
+              <div className="prd-crd-lbl">Registered Devices</div>
+              <div className="prd-crd-dt">4</div>
+              <div>40 %</div>
+            </div>
+            <div className="actv-logo">
+              <i class="fa-brands fa-connectdevelop"></i>
+            </div>
+          </div>
 
-                <div className="product-card">
-                  <div>
-                    <div className='prd-crd-lbl'>Unregistered Devices</div>
-                    <div className='prd-crd-dt'>6</div>
-                    <div>60 %</div>
-                  </div>
-                  <div className='dactv-logo'>
-                  <i class="fa-brands fa-connectdevelop"></i>
-                  </div>
-                </div>
+          <div
+            className={`product-card ${
+              isDarkMode ? "bg-[#313135] text-white" : ""
+            }`}
+          >
+            <div>
+              <div className="prd-crd-lbl">Unregistered Devices</div>
+              <div className="prd-crd-dt">6</div>
+              <div>60 %</div>
+            </div>
+            <div className="dactv-logo">
+              <i class="fa-brands fa-connectdevelop"></i>
+            </div>
+          </div>
 
-                <div className="product-card">
-                  <div>
-                    <div className='prd-crd-lbl'>Total Devices</div>
-                    <div className='prd-crd-dt'>10</div>
-                    <div>&nbsp;</div>
-                  </div>
-                  <div className='prd-logo'>
-                   <i class="fa-solid fa-microchip"></i>
-                  </div>
-                </div>
-             </div>
-
-            </section>
-            <section>
-                <div className='basic-tab'>
-                    <BasicTabs />
-                </div>
-            </section>
+          <div
+            className={`product-card ${
+              isDarkMode ? "bg-[#313135] text-white" : ""
+            }`}
+          >
+            <div>
+              <div className="prd-crd-lbl">Total Devices</div>
+              <div className="prd-crd-dt">10</div>
+              <div>&nbsp;</div>
+            </div>
+            <div className="prd-logo">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+          </div>
         </div>
-
-
+      </section>
+      <section>
+        <div className="basic-tab">
+          <BasicTabs />
+        </div>
+      </section>
+    </div>
 
     // <div>
     //   {/* Display product details */}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -32,14 +32,16 @@ const LoginPage = () => {
     // Handle registration logic here
     console.log("Clicked on Register");
   };
-
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
   return (
     // <section className="bg-gray-50 min-h-screen flex items-center justify-center">
     <div className="bg-[#caf0f8] flex rounded-2xl shadow-lg max-w-3xl p-5 items-center">
       <div className="md:w-1/2 px-8 md:px-16 grid ">
         {/* <h2 className="font-bold text-2xl text-[#002D74]">Login</h2> */}
         <div className="w-11 flex justify-self-center">
-          <img src={logo} />
+          <img src={logo} alt="SmartBuild" />
         </div>
         <p className="text-lg  justify-self-center font-bold mt-3 text-[#002D74]">
           Welcome back!

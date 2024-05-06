@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
+
 import { ChevronLast, ChevronFirst, MoreVertical } from "lucide-react";
 import { createPortal } from "react-dom";
 import logo from "./img/sb-logo.png";
@@ -8,10 +9,22 @@ const SidebarContext = createContext();
 export default function Dash({ children }) {
   const [expanded, setExpanded] = useState(true);
   const { isDarkMode } = useAuth();
-  const [activeItem, setActiveItem] = useState("");
+  const [activeItem, setActiveItem] = useState(() => {
+    // Retrieve the active item from localStorage on initial render
+    const storedActiveItem = localStorage.getItem("activeItem");
+    return storedActiveItem ? storedActiveItem : "Dashboard";
+  });
   const handleItemClick = (text) => {
-    setActiveItem(text === activeItem ? "" : text);
+    if (text !== activeItem) {
+      setActiveItem(text);
+    }
   };
+
+  useEffect(() => {
+    // Store the active item in localStorage whenever it changes
+    localStorage.setItem("activeItem", activeItem);
+  }, [activeItem]);
+
   return (
     <div className="flex no-underline relative h-screen">
       <aside

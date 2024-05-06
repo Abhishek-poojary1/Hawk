@@ -61,7 +61,7 @@ const rows = [
 ];
 
 const User = () => {
-  const { updateUserdata } = useAuth();
+  const { updateUserdata, isDarkMode } = useAuth();
   const navigate = useNavigate();
   const handlecellclick = (param) => {
     updateUserdata(param.row);
@@ -69,17 +69,31 @@ const User = () => {
   };
   return (
     <div className="flex justify-center select-none top-10 relative">
-      <Paper variant="elevation" className="w-max">
-        <div className="flex align-middle">
+      <Paper
+        variant="elevation"
+        className={`w-max ${isDarkMode ? "bg-[#313135] text-white" : ""}`}
+      >
+        <div
+          className={`flex align-middle ${
+            isDarkMode ? "bg-[#313135] text-white" : ""
+          }`}
+        >
           <div className="mx-3.5 mr-96 font-bold self-center">User</div>
           <div className="flex align-middle justify-between gap-2">
             <input
               type="text"
-              className="border-l-rose-300 ml-3.5 outline-none text-center"
+              className={`border-l-rose-300 ml-3.5 outline-none text-center ${
+                isDarkMode ? "bg-[#313135] text-white" : ""
+              }`}
               placeholder="search"
             />
-            <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-              <SearchIcon />
+            <IconButton
+              type="button"
+              className="border-none outline-none"
+              sx={{ p: "10px" }}
+              aria-label="search"
+            >
+              <SearchIcon className="border-none outline-none" />
             </IconButton>
             <div className="flex ml-12">
               <Button
@@ -99,6 +113,7 @@ const User = () => {
             rows={rows}
             columns={columns}
             onCellClick={handlecellclick}
+            className={`${isDarkMode ? "bg-[#313135] text-white" : ""}`}
             initialState={{
               pagination: {
                 paginationModel: { page: 0, pageSize: 5 },
